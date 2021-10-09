@@ -1,6 +1,5 @@
 node_modules/
 .vscode/
-sass/*
 .eslintrc.json
 .prettierrc
 package-lock.json
