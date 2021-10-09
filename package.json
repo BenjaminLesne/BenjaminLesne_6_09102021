@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "git branch; sass sass/main.scss css/main.css --watch; "
-  },
+    "start": "npm i -D eslint prettier;git init; git remote set-url origin",
+    "work": "git branch; sass sass/main.scss css/main.css --watch; "
+
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BenjaminLesne/BenjaminLesne_6_09102021.git"

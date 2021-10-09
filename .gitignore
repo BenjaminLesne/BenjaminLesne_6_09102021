@@ -1,7 +1,8 @@
 node_modules/
 .vscode/
-sass/
+sass/*
 .eslintrc.json
 .prettierrc
 package-lock.json
 package.json
+.gitignore
