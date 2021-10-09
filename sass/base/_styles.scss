@@ -18,16 +18,3 @@ button {
 	background-color: transparent;
 	cursor: pointer;
 }
-
-.logo {
-	@include logo-MenuName-fontFamily;
-	margin-bottom: 10px;
-
-	&--margin0 {
-		margin: 0;
-	}
-}
-
-.center-my-btn {
-	@include flexbox-center;
-}

@@ -1,21 +1,29 @@
 {
-  "name": "P3",
+  "name": "P6",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000b\u0000e\u0000n\u0000j\u0000a\u0000m\u0000i\u0000n\u0000L\u0000e\u0000s\u0000n\u0000e\u0000_\u00003\u0000_\u00000\u00003\u00001\u00000\u00002\u00000\u00002\u00001\u0000\r\u0000 \u0000",
+  "description": "��\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass sass/main.scss css/main.css --watch"
+    "start": "git branch; sass sass/main.scss css/main.css --watch; "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenjaminLesne/benjaminLesne_3_03102021.git"
+    "url": "git+https://github.com/BenjaminLesne/BenjaminLesne_6_09102021.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BenjaminLesne/benjaminLesne_3_03102021/issues"
+    "url": "https://github.com/BenjaminLesne/BenjaminLesne_6_09102021/issues"
   },
-  "homepage": "https://github.com/BenjaminLesne/benjaminLesne_3_03102021#readme"
+  "homepage": "https://github.com/BenjaminLesne/BenjaminLesne_6_09102021#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  }
 }
