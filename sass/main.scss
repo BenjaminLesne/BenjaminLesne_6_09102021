@@ -13,8 +13,22 @@
 // @import "./pages/about";
 // @import "./pages/project";
 
-@import "./utils/variables";
-@import "./utils/mixins";
+@import "./utils/_variables";
+@import "./utils/_mixins";
 @import "./base/_normalize";
 @import "./base/_styles";
 @import "./base/typography";
+@import "./components/_filter-tags";
+@import "./components/_photographer";
+@import "./components/_anchor-to-main-content";
+@import "./components/_btn-and-link";
+@import "./components/_select-menu";
+@import "./components/_like-count";
+@import "./components/_likes-and-price";
+@import "./components/_contact-form";
+@import "./components/_lightbox-modal";
+@import "./components/_sort-by";
+@import "./components/_carousel";
+@import "./layouts/_header";
+@import "./layouts/_main";
+@import "./pages/_photographer-page";

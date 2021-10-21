@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm i -D eslint prettier;git init; git remote set-url origin",
-    "work": "git branch; sass sass/main.scss css/main.css --watch; "
+    "work": "git branch; sass sass/main.scss css/main.css --watch; ",
+    "dependencies": "npm i -D eslint prettier;"
 
 },
   "repository": {

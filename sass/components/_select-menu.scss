@@ -1,0 +1,41 @@
+.select-menu {
+  border-radius: 5px;
+  background-color: $color-primary1;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 175px;
+  width: 100%;
+  font-size: 20px;
+  position: absolute;
+  left: 100px;
+
+  &__selected-item,
+  &__item {
+    color: white;
+    padding: 20px 20px;
+    text-align: left;
+  }
+
+  &__selected-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    // display: none;
+  }
+
+  &__item {
+    text-align: left;
+
+    &:before {
+      border-top: 1px white solid;
+      content: "";
+      display: block;
+      transform: translateY(-20px);
+    }
+  }
+}

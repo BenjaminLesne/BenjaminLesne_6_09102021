@@ -1,0 +1,17 @@
+.like-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28.75px;
+  color: $color-primary1;
+  font-weight: 500;
+
+  &--photographer-page {
+    margin-right: 1px;
+  }
+
+  &__value {
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+}

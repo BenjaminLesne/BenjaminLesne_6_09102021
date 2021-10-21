@@ -1,0 +1,33 @@
+.likes-and-price {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  width: 100%;
+  max-width: 375px;
+  padding: 20px 20px;
+  background-color: $color-primary2;
+
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  border-radius: 5px 5px 0 0;
+
+  &__likes {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__price {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  @include mobile-only {
+    display: none;
+  }
+}

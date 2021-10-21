@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 70%;
+  height: 50px;
+
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 1% 0% 2% 0%;
+  padding-bottom: 0;
+
+  &--photographer-page {
+    position: initial;
+  }
+
+  @include mobile-only {
+    flex-direction: column;
+    width: auto;
+  }
+
+  &__logo {
+    @include mobile-only {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 30px 20px 5px 20px;
+    }
+  }
+
+  &__img {
+    max-height: 100%;
+  }
+
+  &__img-wrapper {
+    display: block;
+    height: 100%;
+    max-width: 250px;
+    @include mobile-only {
+      max-height: 35px;
+    }
+  }
+}

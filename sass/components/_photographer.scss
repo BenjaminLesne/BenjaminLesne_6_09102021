@@ -1,0 +1,157 @@
+.photographer {
+  @include flexbox-center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 38px;
+
+  &__figcaption {
+    display: flex;
+    justify-content: space-between;
+
+    &--picture-showcase h2,
+    &--picture-showcase button {
+      margin-top: 5px;
+    }
+  }
+
+  &--photographer-page {
+    padding: 3% 4%;
+    background-color: $color-secondary2;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    font-size: 65px;
+    justify-content: space-between;
+
+    & > * {
+      flex: 1;
+    }
+
+    @include mobile-only {
+      font-size: 35px;
+      background-color: initial;
+    }
+  }
+  &--picture-showcase {
+    font-size: 25px;
+    justify-content: initial;
+    @include mobile-only {
+      font-size: 15px;
+    }
+  }
+
+  &__btn-wrapper {
+    text-align: left;
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  &__text-block {
+    text-align: left;
+
+    @include mobile-only {
+      flex: initial;
+      width: 100%;
+    }
+  }
+
+  &__top-content {
+    margin: 0;
+    &--photographer-page {
+      text-align: right;
+    }
+
+    &--picture-showcase {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__profile-picture {
+    object-fit: cover;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+
+    &--picture-showcase {
+      border-radius: 5px;
+      height: 300px;
+      width: 100%;
+      cursor: pointer;
+      @include mobile-only {
+        // height: 47vw;
+        // width: 90vw;
+      }
+    }
+
+    &--photographer-page {
+      @include mobile-only {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+
+  &__name {
+    color: $color-primary2;
+    font-size: 100%;
+    font-weight: 400;
+    margin-bottom: 0;
+    white-space: nowrap;
+
+    &--photographer-page {
+      margin: 0;
+    }
+    &--picture-showcase {
+      margin-top: 25px;
+      text-align: left;
+      color: $color-primary1;
+      white-space: normal;
+    }
+  }
+
+  &__info {
+    @include flexbox-center;
+    flex-direction: column;
+
+    &--photographer-page {
+      align-items: flex-start;
+      margin: 7px 0;
+    }
+  }
+
+  &__location {
+    color: $color-primary1;
+
+    font-size: 37%;
+    margin-bottom: 5px;
+
+    &--photographer-page {
+      @include mobile-only {
+        font-size: 45%;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 26%;
+    margin: 4px 0px;
+    &--photographer-page {
+      color: $color-secondary1;
+      @include mobile-only {
+        font-size: 35%;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 26%;
+
+    color: $color-secondary1;
+
+    &--photographer-page {
+      visibility: hidden;
+    }
+  }
+}

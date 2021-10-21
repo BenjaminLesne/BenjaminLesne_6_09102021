@@ -1,41 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- js -->
 
+    <script type="module" src="./js/index.js"></script>
     <!-- Fonts -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
     <!-- FontAwesome - icons -->
-    <script src="https://kit.fontawesome.com/0902388030.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/0902388030.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body class="body">
-    <header>
+  <body class="body">
+    <a href="#main-content" class="anchor-to-main-content btn-and-link"
+      >Passer au contenu</a
+    >
+    <header class="header">
+      <div class="header__logo">
+        <a href="index.html" class="header__img-wrapper"
+          ><img
+            src="images/FishEyeLogo.png"
+            alt="Fisheye Home page"
+            class="header__img"
+        /></a>
+      </div>
 
+      <nav class="filter-tags" aria-label="photographer filters">
+        <a href="#" class="filter-tags__tag-wrapper"
+          ><span
+            class="filter-tags__tag"
+            role="filter"
+            aria-label="Tag: Portrait"
+            >#Portrait</span
+          ></a
+        >
+        <a href="#" class="filter-tags__tag-wrapper"
+          ><span class="filter-tags__tag" role="filter" aria-label="Tag: Art"
+            >#Art</span
+          ></a
+        >
+        <a href="#" class="filter-tags__tag-wrapper"
+          ><span
+            class="filter-tags__tag"
+            role="filter"
+            aria-label="Tag: Fashion"
+            >#Fashion</span
+          ></a
+        >
+        <a href="#" class="filter-tags__tag-wrapper"
+          ><span
+            class="filter-tags__tag"
+            role="filter"
+            aria-label="Tag: Architecture"
+            >#Architecture</span
+          ></a
+        ><a href="#" class="filter-tags__tag-wrapper"
+          ><span class="filter-tags__tag" role="filter" aria-label="Tag: Travel"
+            >#Travel</span
+          ></a
+        ><a href="#" class="filter-tags__tag-wrapper"
+          ><span class="filter-tags__tag" role="filter" aria-label="Tag: Sport"
+            >#Sport</span
+          ></a
+        ><a href="#" class="filter-tags__tag-wrapper"
+          ><span
+            class="filter-tags__tag"
+            role="filter"
+            aria-label="Tag: Animals"
+            >#Animals</span
+          ></a
+        ><a href="#" class="filter-tags__tag-wrapper"
+          ><span class="filter-tags__tag" role="filter" aria-label="Tag: Events"
+            >#Events</span
+          ></a
+        >
+      </nav>
     </header>
-    <main>
-
+    <main class="main">
+      <div><h1 class="main__title">Nos photographes</h1></div>
+      <div class="main__photographers" id="main-content"></div>
     </main>
-    <footer>
-
-
-    </footer>
-
-</body>
-
+    <footer></footer>
+  </body>
 </html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- js -->
+
+    <script type="module" src="./js/photographer-page.js"></script>
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome - icons -->
+    <script
+      src="https://kit.fontawesome.com/0902388030.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="body">
+    <header class="header header--photographer-page">
+      <div class="header__logo">
+        <a href="index.html" class="header__img-wrapper"
+          ><img
+            src="images/FishEyeLogo.png"
+            alt="Fisheye Home page"
+            class="header__img"
+        /></a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="photographer photographer--photographer-page">
+        <a href="photographer-page?id=243.html">
+          <div
+            class="
+              photographer__top-content
+              photographer__top-content--photographer-page
+            "
+          >
+            <img
+              src="images/Photographers_ID_Photos/MimiKeel.jpg"
+              alt="Mimi Keel profile picture"
+              class="
+                photographer__profile-picture
+                photographer__profile-picture--photographer-page
+              "
+            />
+          </div>
+        </a>
+        <div class="photographer__btn-wrapper">
+          <button
+            class="btn btn--photographer-page btn-and-link triggerModal"
+            aria-label="contact me"
+          >
+            Contactez-moi
+          </button>
+        </div>
+        <div class="photographer__text-block">
+          <h2
+            class="photographer__name photographer__name--photographer-page"
+            aria-hidden="true"
+          >
+            Mimi Keel
+          </h2>
+          <p
+            class="photographer__info photographer__info--photographer-page"
+            tabindex="0"
+          >
+            <span
+              class="photographer__location"
+              aria-label="location: London, undefined"
+              >London, UK</span
+            >
+            <span
+              class="
+                photographer__description
+                photographer__description--photographer-page
+              "
+              aria-label="description: Voir le beau dans le quotidien"
+              >Voir le beau dans le quotidien</span
+            >
+            <span
+              class="photographer__price photographer__price--photographer-page"
+              >400€/jour</span
+            >
+          </p>
+          <nav class="filter-tags filter-tags--photographe-page">
+            <a href="#" class="filter-tags__tag-wrapper"
+              ><span
+                class="filter-tags__tag"
+                role="filter"
+                aria-label="Tag: portrait"
+                >#portrait</span
+              ></a
+            >
+            <a href="#" class="filter-tags__tag-wrapper"
+              ><span
+                class="filter-tags__tag"
+                role="filter"
+                aria-label="Tag: events"
+                >#events</span
+              ></a
+            >
+            <a href="#" class="filter-tags__tag-wrapper"
+              ><span
+                class="filter-tags__tag"
+                role="filter"
+                aria-label="Tag: travel"
+                >#travel</span
+              ></a
+            >
+            <a href="#" class="filter-tags__tag-wrapper"
+              ><span
+                class="filter-tags__tag"
+                role="filter"
+                aria-label="Tag: animals"
+                >#animals</span
+              ></a
+            >
+          </nav>
+        </div>
+      </section>
+
+      <div class="sort-by" aria-label="Order by">
+        <div><span class="sort-by__label">Trier par</span></div>
+        <div class="select-menu">
+          <button
+            class="select-menu__selected-item"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+          >
+            <span class="select-menu__selected-item-text">Popularité</span
+            ><i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="select-menu__items" style="display: none">
+            <button class="select-menu__item">Date</button>
+            <button class="select-menu__item">Titre</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="main__photographers main__photographers--photographer-page"
+        id="main-content"
+      >
+        <article class="photographer photographer--picture-showcase">
+          <figure
+            class="
+              photographer__top-content
+              photographer__top-content--picture-showcase
+            "
+          >
+            <img
+              src="images/Photographers_ID_Photos/MimiKeel.jpg"
+              alt="Lilac breasted roller, closeup view"
+              class="
+                photographer__profile-picture
+                photographer__profile-picture--picture-showcase
+                triggerModal
+              "
+            />
+
+            <figcaption
+              class="
+                photographer__figcaption
+                photographer__figcaption--picture-showcase
+              "
+            >
+              <h2
+                class="photographer__name photographer__name--picture-showcase"
+              >
+                Arc-en-ciel
+              </h2>
+              <button
+                type="button"
+                class="like-count like-count--photographer-page 342550"
+              >
+                <i class="like-count__value 342550"
+                  >12 <i class="fas fa-heart"></i
+                ></i>
+              </button>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </main>
+    <aside class="likes-and-price">
+      <span class="likes-and-price__likes" aria-label="likes">
+        <span class="likes-and-price__total-likes-value"></span>
+        <i class="fas fa-heart"></i>
+      </span>
+      <span class="likes-and-price__price" aria-label="price"></span>
+    </aside>
+
+    <dialog
+      aria-label="Contat me Mimi Keel"
+      aria-labellby="2"
+      class="contact-dialog"
+    >
+      <div class="contact-dialog__content-wrapper">
+        <button
+          class="contact-dialog__close-btn"
+          aria-label="Close Contact form"
+        >
+          <span class="contact-dialog__cross" aria-hidden="true"></span>
+        </button>
+
+        <h1 class="contact-dialog__title">Contactez-moi Mimi Keel</h1>
+        <form method="dialog" class="contact-dialog__form">
+          <label for="first-name" class="contact-dialog__label" id="3"
+            >Prénom</label
+          >
+          <input
+            type="text"
+            name="first-name"
+            class="contact-dialog__input"
+            aria-labellby="3"
+            aria-label="First Name"
+          />
+
+          <label for="last-name" class="contact-dialog__label" id="5"
+            >Nom</label
+          >
+          <input
+            type="text"
+            name="last-name"
+            class="contact-dialog__input"
+            aria-labellby="5"
+            aria-label="Last Name"
+          />
+
+          <label for="email-name" class="contact-dialog__label" id="7"
+            >Email</label
+          >
+          <input
+            type="email"
+            name="email-name"
+            class="contact-dialog__input"
+            aria-labellby="7"
+            aria-label="Email"
+          />
+
+          <label
+            for="message"
+            class="contact-dialog__label contact-dialog__label--textarea"
+            id="9"
+            >Votre message</label
+          >
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            rows="4"
+            class="contact-dialog__textarea"
+            aria-labellby="9"
+            aria-label="Your message"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="btn btn-and-link contact-dialog__submit-btn"
+            aria-label="Send"
+          >
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </dialog>
+
+    <!-- ========================================================================= -->
+
+    <dialog
+      aria-label="image closeup view"
+      aria-labellby="2"
+      class="contact-dialog contact-dialog--lightbox"
+    >
+      <div
+        class="
+          contact-dialog__content-wrapper
+          contact-dialog__content-wrapper--lightbox
+        "
+      >
+        <div class="lightbox">
+          <div class="carousel">
+            <aside class="carousel__aside">
+              <div class="carousel__close-btn-wrapper"></div>
+              <div
+                class="carousel__arrows-wrapper carousel__arrows-wrapper--left"
+              >
+                <i
+                  class="
+                    fas
+                    fa-chevron-left
+                    carousel__arrows carousel__arrows--left
+                  "
+                  aria-label="Previous image"
+                ></i>
+              </div>
+            </aside>
+            <figure class="carousel__picture-wrapper">
+              <img
+                src="images/Photographers_ID_Photos/MimiKeel.jpg"
+                alt=""
+                class="carousel__picture"
+              />
+              <figcaption>
+                <h2 class="carousel__title">Arc-en-ciel</h2>
+              </figcaption>
+            </figure>
+            <aside class="carousel__aside">
+              <div class="carousel__close-btn-wrapper">
+                <button
+                  class="
+                    contact-dialog__close-btn
+                    contact-dialog__close-btn--lightbox
+                  "
+                  aria-label="Close dialog"
+                >
+                  <span
+                    class="
+                      contact-dialog__cross contact-dialog__cross--lightbox
+                    "
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+              <div class="carousel__arrows-wrapper">
+                <i
+                  class="fas fa-chevron-right carousel__arrows"
+                  aria-label="Next image"
+                ></i>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </dialog>
+    <!-- ========================================================================= -->
+  </body>
+</html>
