@@ -1,0 +1,21 @@
+.btn {
+  border-radius: 5px;
+  padding: 23px 13px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  &-and-link {
+    background-color: $color-primary1;
+    color: white;
+
+    &:hover {
+      background-color: $color-primary2;
+      color: initial;
+    }
+  }
+
+  &--photographer-page {
+    margin-right: auto;
+  }
+}
