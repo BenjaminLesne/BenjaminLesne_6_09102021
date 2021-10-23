@@ -1,4 +1,4 @@
-import getDatas from "./components/getDatas";
+import getDatas from "components/getDatas";
 import createPhotographer from "./components/createPhotographer";
 
 window.onload = async function () {
