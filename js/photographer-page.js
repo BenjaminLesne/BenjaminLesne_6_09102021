@@ -1,7 +1,6 @@
 import incrementLikeCount from "./components/handleLikeCount.js";
 import handleSelectMenu from "./components/selectMenu.js";
 import handleModal from "./components/modal.js";
-
 import getDatas from "./components/getDatas.js";
 import createPhotographer from "./components/createPhotographer.js";
 
