@@ -1,4 +1,4 @@
-import generateFilters from "./generateFilters";
+import generateFilters from "./generateFilters.js";
 
 async function createPhotographer(photographerDatas, mediaDatas) {
   // returned object looks like this
