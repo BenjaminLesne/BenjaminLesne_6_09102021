@@ -1,5 +1,5 @@
-import getDatas from "/components/getDatas";
-import createPhotographer from "./components/createPhotographer";
+import getDatas from "/components/getDatas.js";
+import createPhotographer from "./components/createPhotographer.js";
 
 window.onload = async function () {
   const element = document.querySelectorAll(".filter-tags__tag");
