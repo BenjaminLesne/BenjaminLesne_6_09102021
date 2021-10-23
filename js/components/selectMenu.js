@@ -1,4 +1,4 @@
-import createPhotographer from "./createPhotographer";
+import createPhotographer from "./createPhotographer.js";
 
 function handleSelectMenu(id, photographerDatas, mediaDatas) {
   const selectedItemElement = document.querySelector(
