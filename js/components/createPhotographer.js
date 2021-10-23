@@ -84,7 +84,7 @@ async function createPhotographer(photographerDatas, mediaDatas) {
     `;
     });
 
-    return ShouldWeTriggerHandleModal("oui");
+    return ShouldWeTriggerHandleModal("yes");
   }
 
   async function generateCard(type, sortBy) {
