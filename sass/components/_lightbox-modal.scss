@@ -1,5 +1,5 @@
 .lightbox {
-  display: flex;
+  @include flexbox-center;
   flex-direction: column;
   height: 100%;
 }

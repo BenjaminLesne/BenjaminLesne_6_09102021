@@ -1,8 +1,11 @@
 import getDatas from "./components/getDatas";
-import generateArticles from "./components/generateArticles";
+import createPhotographer from "./components/createPhotographer";
 
 window.onload = async function () {
-  // passer au contenu button
+  const element = document.querySelectorAll(".filter-tags__tag");
+  const data = await getDatas();
+
+  // passer au contenu/go back to content button
   const intersectionObserver = new IntersectionObserver(function (entries) {
     // if observed element is out of screen, show the anchor to go back to main content
     if (entries[0].intersectionRatio <= 0) {
@@ -15,11 +18,24 @@ window.onload = async function () {
   // start observing
   intersectionObserver.observe(document.querySelector(".header"));
 
-  // watch click on tags to filter main-content
+  async function generateAllPhotographers(photographers) {
+    // generate all photographers then store all promises in array
+    const result = [];
+    for (let i = 0; i < photographers.length; i += 1) {
+      result.push(createPhotographer(photographers[i]));
+    }
+    // when all promises done, all element trigger the method generateProfileCard
+    await Promise.all(result).then((value) => {
+      const mainContent = document.getElementById("main-content"); // where we generate the content in the HTML
+      mainContent.innerHTML = ""; // remove old content
 
-  const element = document.querySelectorAll(".filter-tags__tag");
-  const data = await getDatas();
-
+      for (let i = 0; i < value.length; i += 1) {
+        console.log(value[i]);
+        value[i].generateCard("profile");
+      }
+    });
+  }
+  // watch tags on click filter main-content articles
   for (let k = 0; k < element.length; k += 1) {
     element[k].addEventListener("click", async function test(e) {
       const photographersFiltered = [];
@@ -36,9 +52,10 @@ window.onload = async function () {
           }
         }
       }
-      generateArticles(data, 1.1, photographersFiltered);
+
+      generateAllPhotographers(photographersFiltered);
     });
   }
 
-  generateArticles(data, 1);
+  generateAllPhotographers(data.photographers);
 };
