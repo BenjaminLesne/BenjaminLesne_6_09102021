@@ -121,7 +121,7 @@ function handleModal() {
               ".contact-dialog__textarea"
             );
 
-            // as asked, I inputs content are shown in the console on submit
+            // as asked, inputs content are shown in the console on submit
             for (let i = 0; i < inputElements.length; i += 1) {
               console.log(
                 `${inputElements[i].name}: ${inputElements[i].value}`
@@ -136,6 +136,7 @@ function handleModal() {
 
         break;
 
+      // case "VIDEO":
       case "IMG":
         dialog = document.querySelector(".contact-dialog--lightbox");
 
@@ -151,6 +152,30 @@ function handleModal() {
             handleArrowsClick(event)
           );
         }
+
+        document.addEventListener("keydown", function (e) {
+          switch (e.code) {
+            case "ArrowLeft":
+              console.log("left");
+              const arrowLeft = document.querySelector(
+                ".carousel__arrows--left"
+              );
+              arrowLeft.click();
+              break;
+
+            case "ArrowRight":
+              const arrowRight = document.querySelector(
+                ".carousel__arrows--right"
+              );
+              arrowRight.click();
+              break;
+
+            default:
+              console.log("NOT A ARROW DUMB ADD HAHA");
+              console.log(e);
+              break;
+          }
+        });
 
         break;
 

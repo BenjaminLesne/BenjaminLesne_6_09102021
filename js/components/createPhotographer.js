@@ -199,8 +199,9 @@ async function createPhotographer(photographerDatas, mediaDatas) {
                             <button
                               type="button"
                               class="like-count like-count--photographer-page ${mediaDatas[j].id}"
+                              aria-label="like"
                             >
-                              <i class="like-count__value ${mediaDatas[j].id}"
+                              <i class="like-count__value ${mediaDatas[j].id}" tabindex="0"
                                 >${mediaDatas[j].likes}</i> <i class="fas fa-heart ${mediaDatas[j].id}"></i
                               >
                             </button>

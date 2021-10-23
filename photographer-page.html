@@ -49,18 +49,23 @@
 
       <div class="sort-by" aria-label="Order by">
         <div><span class="sort-by__label">Trier par</span></div>
-        <div class="select-menu">
+        <div class="select-menu" aria-label="sort by menu" tabindex="0">
           <button
             class="select-menu__selected-item"
+            aria-selected="true"
             aria-haspopup="listbox"
             aria-expanded="false"
           >
             <span class="select-menu__selected-item-text">Popularité</span
             ><i class="fas fa-chevron-down"></i>
           </button>
-          <div class="select-menu__items" style="display: none">
-            <button class="select-menu__item">Date</button>
-            <button class="select-menu__item">Titre</button>
+          <div class="select-menu__items" role="listbox" style="display: none">
+            <button class="select-menu__item" aria-selected="false">
+              Date
+            </button>
+            <button class="select-menu__item" aria-selected="false">
+              Titre
+            </button>
           </div>
         </div>
       </div>
@@ -179,11 +184,6 @@
               </div>
             </aside>
             <figure class="carousel__picture-wrapper">
-              <!-- <img
-                src="images/Photographers_ID_Photos/MimiKeel.jpg"
-                alt=""
-                class="carousel__picture"
-              /> -->
               <figcaption>
                 <h2 class="carousel__title"></h2>
               </figcaption>
@@ -207,7 +207,11 @@
               </div>
               <div class="carousel__arrows-wrapper">
                 <i
-                  class="fas fa-chevron-right carousel__arrows"
+                  class="
+                    fas
+                    fa-chevron-right
+                    carousel__arrows carousel__arrows carousel__arrows--right
+                  "
                   aria-label="Next image"
                 ></i>
               </div>
