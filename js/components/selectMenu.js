@@ -1,6 +1,6 @@
-import generateArticles from "./generateArticles";
+import createPhotographer from "./createPhotographer";
 
-function handleSelectMenu(id) {
+function handleSelectMenu(id, photographerDatas, mediaDatas) {
   const selectedItemElement = document.querySelector(
     ".select-menu__selected-item"
   );
@@ -12,7 +12,7 @@ function handleSelectMenu(id) {
   const menuItem = document.querySelectorAll(".select-menu__item");
   const selectMenu = document.querySelector(".select-menu");
 
-  function handleClick(e) {
+  async function handleClick(e) {
     // if menu open, close it
     if (menuItems.style.display === "flex") {
       menuItems.style.display = "none";
@@ -24,20 +24,22 @@ function handleSelectMenu(id) {
       selectedItemElement.setAttribute("aria-expanded", "true");
       arrow.className = "fas fa-chevron-up";
     }
-
+    // if e.target is an menu item...
     if (e.target === menuItem[0] || e.target === menuItem[1]) {
       const itemClickedInnerText = e.explicitOriginalTarget.innerText;
       const selectedItemTextInnerText = selectedItemTextElement.innerText;
 
-      // if e.target is an menu item, change the selected item by this one
+      // ...change the selected item by e.target.innerText
       selectedItemTextElement.innerText = itemClickedInnerText;
       e.target.innerText = selectedItemTextInnerText;
 
-      // generateArticles(data, 2, id);
-      // generateArticles(myData, type, param)
-    }
+      // and generate articles sorted by selectedItem
+      const test = createPhotographer(photographerDatas, mediaDatas);
 
-    // tu prends la valeur innerText et tu fais générer la page avec des articles étant filtrer avec la valeur
+      test.then((tests) => tests.generateCard("media", itemClickedInnerText));
+      console.log("itemClickedInnerText");
+      console.log(itemClickedInnerText);
+    }
   }
 
   selectMenu.addEventListener("click", (e) => handleClick(e));

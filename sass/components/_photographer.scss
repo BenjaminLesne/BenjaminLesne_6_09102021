@@ -42,7 +42,7 @@
   &__btn-wrapper {
     text-align: left;
     @include mobile-only {
-      display: none;
+      flex: 0;
     }
   }
 
