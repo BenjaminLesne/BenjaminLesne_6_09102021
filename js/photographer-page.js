@@ -81,7 +81,6 @@ window.onload = async function () {
   );
 
   testou.then(() => handleModal());
-  console.log(testou);
 
   handleSelectMenu(id, photographerDatas, mediaDatas);
 };

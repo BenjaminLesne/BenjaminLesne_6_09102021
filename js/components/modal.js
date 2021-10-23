@@ -1,7 +1,5 @@
 function handleModal() {
   const body = document.querySelector("body");
-  let currentPictureIndex;
-  let carouselCurrentPicture;
   const carouselCurrentPictureWrapper = document.querySelector(
     ".carousel__picture-wrapper"
   );
@@ -9,6 +7,9 @@ function handleModal() {
   const allMediaToDisplay = document.querySelectorAll(
     ".photographer__profile-picture--picture-showcase"
   );
+
+  let currentPictureIndex;
+  let carouselCurrentPicture;
   let t;
 
   function closeModal(e) {
@@ -108,16 +109,31 @@ function handleModal() {
     switch (e.explicitOriginalTarget.tagName) {
       case "BUTTON":
         dialog = document.querySelector(".contact-dialog");
-
         document
           .querySelector(".contact-dialog__submit-btn")
           .addEventListener("click", (event) => {
             event.preventDefault();
+
+            const inputElements = document.querySelectorAll(
+              ".contact-dialog__input"
+            );
+            const textAreaElement = document.querySelector(
+              ".contact-dialog__textarea"
+            );
+
+            // as asked, I inputs content are shown in the console on submit
+            for (let i = 0; i < inputElements.length; i += 1) {
+              console.log(
+                `${inputElements[i].name}: ${inputElements[i].value}`
+              );
+            }
+            console.log(`${textAreaElement.name}: ${textAreaElement.value}`);
+            // simulate submit refresh
             setTimeout(() => {
               closeModal(event);
             }, 1000);
           });
-        console.log("my copde ran");
+
         break;
 
       case "IMG":
